@@ -1,0 +1,25 @@
+# Sistema Clínica Veterinaria
+
+class Animal:
+    def __init__(self, nombre, especie):
+        self.nombre = nombre
+        self.especie = especie
+
+    def mostrar_info(self):
+        print("Nombre:", self.nombre)
+        print("Especie:", self.especie)
+
+
+class Perro(Animal):
+    def __init__(self, nombre, especie, raza):
+        super().__init__(nombre, especie)
+        self.raza = raza
+
+    def mostrar_raza(self):
+        print("Raza:", self.raza)
+
+
+
+perro = Perro("Max", "Canino", "Labrador")
+perro.mostrar_info()
+perro.mostrar_raza()
